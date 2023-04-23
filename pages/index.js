@@ -48,5 +48,8 @@ export function getStaticProps() {
     props: {
       products,
     },
+    //to update site every one second to get new data
+    revalidate: 1,
   };
 }
+
