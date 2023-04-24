@@ -4,6 +4,8 @@ import { Card } from "react-bootstrap";
 export default function bookId({ book }) {
   //   const router = useRouter();
   //   const mybookId = router.query.params.bookId;
+  
+
   console.log(book);
   return (
     <div>

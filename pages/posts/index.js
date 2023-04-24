@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Card } from "react-bootstrap";
 
 export default function Posts({ posts }) {
+  //getting data from psops and make use of itS
   // console.log(posts);
   return (
     <>
@@ -18,6 +19,7 @@ export default function Posts({ posts }) {
   );
 }
 
+//Fetching data to props
 export async function getStaticProps() {
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/posts?_limit=10"
