@@ -52,4 +52,3 @@ export function getStaticProps() {
     revalidate: 1,
   };
 }
-

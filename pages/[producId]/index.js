@@ -2,13 +2,13 @@ import ProductDetails from "../../components/ProductDetails";
 import { useRouter } from "next/router";
 
 export default function ProductDetailsPage(props) {
-  // console.log(props);
-  const router = useRouter();
-  const myProductId = router.query.producId; //to get params which is the file Iteself
+  console.log(props);
+  // const router = useRouter();
+  // const myProductId = router.query.producId; //to get params which is the file Iteself
   return (
     <div>
       <ProductDetails
-        id={props.productData.id}
+        // id={props.productData.productId}
         title={props.productData.title}
         price={props.productData.price}
         img={props.productData.img}
@@ -18,29 +18,40 @@ export default function ProductDetailsPage(props) {
   );
 }
 
+// export function getStaticPaths() {
+//   //Connect to db to get products ids
+//   return {
+//     fallback: true,
+//     paths: [
+//       {
+//         params: {
+//           productId: "1",
+//         },
+//       },
+//       {
+//         params: {
+//           productId: "2",
+//         },
+//       },
+//     ],
+//   };
+// }
+
 export function getStaticPaths() {
-  //Connect to db to get products ids
   return {
-    fallback: true,
     paths: [
-      {
-        params: {
-          productId: "1",
-        },
-      },
-      {
-        params: {
-          productId: "2",
-        },
-      },
+      { params: { productId: "1" } },
+      { params: { productId: "2" } },
+      // { params: { productId: "3" } },
     ],
+    fallback: false, // can also be true or 'blocking'
   };
 }
 
 export function getStaticProps(context) {
-  // console.log(context);
   // Fetch data => productDetails //Dynamically
   const productId = context.params.productId;
+
   return {
     props: {
       productData: {
