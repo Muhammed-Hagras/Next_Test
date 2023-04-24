@@ -16,11 +16,11 @@ export default function MyNav() {
             <Link href="/about" className="nav-link">
               About
             </Link>
-            <Link href="/products" className="nav-link">
-              Products
+            <Link href="/posts" className="nav-link">
+              Posts
             </Link>
-            <Link href="/users" className="nav-link">
-              Users
+            <Link href="/books" className="nav-link">
+              Books
             </Link>
           </Nav>
         </Navbar.Collapse>
