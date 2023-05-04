@@ -6,11 +6,11 @@ export default function ProductList(props) {
     <ul className={styles.list}>
       {props.products.map((product) => (
         <ProductItem
-          key={product.id}
-          id={product.id}
-          img={product.img}
+          key={product._id}
+          id={product._id}
+          img={product.image}
           desc={product.desc}
-          title={product.title}
+          title={product.name}
           price={product.price}
         />
       ))}
