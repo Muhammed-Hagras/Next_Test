@@ -11,7 +11,7 @@ function HomePage(props) {
 
   return (
     <Fragment>
-      <ProductList products={props.products} />
+      <ProductList products={props.products.data} />
     </Fragment>
   );
 }
@@ -19,8 +19,9 @@ export default HomePage;
 
 //To get data from server before loading the page
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("http://localhost:3000/api/mongoproducts");
   const data = await res.json();
+  console.log(data);
   return {
     props: {
       products: data,
