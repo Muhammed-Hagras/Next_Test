@@ -1,5 +1,3 @@
-// muhammedhagras237
-// Qut0EYYshI0cpkfn
 
 import mongoose from "mongoose";
 
@@ -19,4 +17,3 @@ export const dbConnect = async () => {
     return Promise.reject(error);
   }
 };
-// mongodb+srv://muhammedhagras237:<password>@cluster0.f2f48rh.mongodb.net/?retryWrites=true&w=majority
